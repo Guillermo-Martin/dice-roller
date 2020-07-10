@@ -1,10 +1,11 @@
 import React from 'react';
+import Die from './components/die';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Dice Exercise</h1>
+      <Die />
     </div>
   );
 }
