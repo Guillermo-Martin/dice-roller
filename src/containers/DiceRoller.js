@@ -7,9 +7,23 @@ class DiceRoller extends Component {
     dieNumber: <i class="fas fa-dice-one"></i>
   }
 
-  // create a function that generates a random number between 1 and 6
+  // roll function
   roll = () => {
-    this.setState({dieNumber: Math.floor(Math.random() * 6) + 1});
+    // array to hold all die icons
+    let allDice = [
+      <i class="fas fa-dice-one"></i>,
+      <i class="fas fa-dice-two"></i>,
+      <i class="fas fa-dice-three"></i>,
+      <i class="fas fa-dice-four"></i>,
+      <i class="fas fa-dice-five"></i>,
+      <i class="fas fa-dice-six"></i>,
+    ]
+
+    // generate random number between 0-5 (for dice array)
+    let randomNum = Math.floor(Math.random() * 6);
+
+    // use randomNum to get index of random die from array
+    this.setState({dieNumber: allDice[randomNum]});
   }
 
   render() {
