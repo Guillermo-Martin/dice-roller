@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Die() {
+function Die(props) {
   return(
-    <h1>This is a Die component</h1>
+    <h1>{props.num}</h1>
   );
 }
 
