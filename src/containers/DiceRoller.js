@@ -9,7 +9,7 @@ class DiceRoller extends Component {
 
   // create a function that generates a random number between 1 and 6
   roll = () => {
-    alert("You clicked the button!");
+    this.setState({dieNumber: Math.floor(Math.random() * 6) + 1});
   }
 
   render() {
