@@ -2,7 +2,7 @@ import React from 'react';
 
 function Die(props) {
   return(
-    <h1>{props.num}</h1>
+      <i class={`fas fa-dice-${props.num}`}></i>
   );
 }
 

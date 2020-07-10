@@ -4,21 +4,14 @@ import Die from './../components/die';
 class DiceRoller extends Component {
   // create state to manage the changing of the die's face
   state = {
-    dieNumber1: <i class="fas fa-dice-one"></i>,
-    dieNumber2: <i class="fas fa-dice-one"></i>
+    dieNumber1: "one",
+    dieNumber2: "one"
   }
 
   // roll function
   roll = () => {
-    // array to hold all die icons
-    let allDice = [
-      <i class="fas fa-dice-one"></i>,
-      <i class="fas fa-dice-two"></i>,
-      <i class="fas fa-dice-three"></i>,
-      <i class="fas fa-dice-four"></i>,
-      <i class="fas fa-dice-five"></i>,
-      <i class="fas fa-dice-six"></i>,
-    ]
+    // array to hold all die numbers for icons
+    let allDice = [ "one", "two", "three", "four", "five", "six" ];
 
     // generate random number between 0-5 (for dice array)
     let randomNum1 = Math.floor(Math.random() * 6);
