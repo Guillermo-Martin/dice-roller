@@ -4,7 +4,8 @@ import Die from './../components/die';
 class DiceRoller extends Component {
   // create state to manage the changing of the die's face
   state = {
-    dieNumber: <i class="fas fa-dice-one"></i>
+    dieNumber1: <i class="fas fa-dice-one"></i>,
+    dieNumber2: <i class="fas fa-dice-one"></i>
   }
 
   // roll function
@@ -20,18 +21,18 @@ class DiceRoller extends Component {
     ]
 
     // generate random number between 0-5 (for dice array)
-    let randomNum = Math.floor(Math.random() * 6);
+    let randomNum1 = Math.floor(Math.random() * 6);
+    let randomNum2 = Math.floor(Math.random() * 6);
 
     // use randomNum to get index of random die from array
-    this.setState({dieNumber: allDice[randomNum]});
+    this.setState({dieNumber1: allDice[randomNum1], dieNumber2: allDice[randomNum2]});
   }
 
   render() {
     return (
       <div>
-        <Die 
-          num={this.state.dieNumber}
-        />
+        <Die num={this.state.dieNumber1} />
+        <Die num={this.state.dieNumber2} />
         <button onClick={this.roll}>Roll Dice</button>
       </div>
     );
